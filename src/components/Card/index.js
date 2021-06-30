@@ -10,8 +10,10 @@ const Card = ({ image, names, toxicity }) => {
       <div className="backgroundImg"  style={ { backgroundImage: `url(${process.env.PUBLIC_URL + image})` } }></div>
       <div className="metadata">
         <h3>{ names.common }</h3>
-        <Badge status={ isToxicStr.toLowerCase() } >{ isToxicStr }</Badge>
-        <input type="checkbox" id="favorite" name="favorite" value="favorite"></input>
+        <div className="action">
+          <Badge status={ isToxicStr.toLowerCase() } >{ isToxicStr }</Badge>
+          <input type="checkbox" id="favorite" name="favorite" value="favorite"></input>
+        </div>
       </div>
     </div> 
   );
