@@ -3,7 +3,7 @@ import './Grid.css';
 import Card from '../Card';
 import ListRow from '../ListRow';
 
-const Grid = ({ query, filter, displayType = 'Grid', options }) => {
+const Grid = ({ query, filter, displayType = 'List', options }) => {
   const [ data, setData ] = useState([]);
 
   useEffect(()=> {
@@ -17,7 +17,6 @@ const Grid = ({ query, filter, displayType = 'Grid', options }) => {
 
   const getResults = (filter) => {
     if (data) {
-      console.log(data);
       if (filter) {
         return <div>Loading...</div>;
       }
@@ -31,7 +30,7 @@ const Grid = ({ query, filter, displayType = 'Grid', options }) => {
   };
 
   return (
-    <div className="Grid">
+    <div className={ displayType }>
       { getResults(filter) }
     </div>
   );
