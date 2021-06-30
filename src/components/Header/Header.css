@@ -1,11 +1,7 @@
-@import '@sproutsocial/seeds-color/dist/seeds-color.css';
-@import '@sproutsocial/seeds-typography/dist/seeds-typography.css';
-
 #Header {
     background-color: var(--color-blue-0);
     height: 392px;
     width: 100%;
-    text-align: left;
 }
 
 h1 {

@@ -1,11 +1,13 @@
 import React from 'react';
+import './Card.css';
 import Badge from '../Badge';
 
 const Card = ({ image, names, toxicity }) => {
   const isToxicStr = toxicity ? 'Toxic' : 'Non-toxic';
   return (
+    
     <div className="Card">
-      <img src={ process.env.PUBLIC_URL + image }></img>
+      <div className="backgroundImg"  style={ { backgroundImage: `url(${process.env.PUBLIC_URL + image})` } }></div>
       <div className="metadata">
         <h3>{ names.common }</h3>
         <Badge status={ isToxicStr.toLowerCase() } >{ isToxicStr }</Badge>

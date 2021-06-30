@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Badge = ({ children }) => {
+const Badge = ({ status, children }) => {
   return (
-    <div className="Badge">
+    <div className={ `Badge ${status}` }>
       {children}
     </div> 
   );

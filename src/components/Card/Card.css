@@ -1,0 +1,14 @@
+.Card {
+    height: 320px;
+}
+
+.Card .backgroundImg {
+    height: 80%;
+    border-radius: 5px 5px 0 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.Card .metadata {
+    padding: 2px 16px;
+}

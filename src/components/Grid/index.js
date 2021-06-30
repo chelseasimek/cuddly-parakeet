@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Grid.css';
 import Card from '../Card';
 import ListRow from '../ListRow';
 
@@ -29,7 +30,11 @@ const Grid = ({ query, filter, displayType = 'Grid', options }) => {
     return <div>Loading...</div>;
   };
 
-  return (getResults(filter));
+  return (
+    <div className="Grid">
+      { getResults(filter) }
+    </div>
+  );
 };
 
 export default Grid;
